@@ -1,140 +1,440 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>আমার প্রথম ওয়েবসাইট</title>
-    <style>
-        /* সিএসএস (CSS) দিয়ে স্টাইল করা */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
 
-        body {
-            background-color: #f4f6f9;
-            color: #333;
-            line-height: 1.6;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* হেডার ও নেভিগেশন বার */
-        header {
-            background-color: #3a5fd9;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
+<title>AR Islamic Store</title>
 
-        header h1 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            font-size: 14px;
-            transition: color 0.3s;
-        }
 
-        nav a:hover {
-            color: #ff5722;
-        }
+<style>
 
-        /* মেইন কন্টেইনার */
-        .container {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 20px;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-        /* কার্ড বা সেকশন স্টাইল */
-        .card {
-            background-color: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
-        }
 
-        .card h2 {
-            color: #3a5fd9;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #e8eaf6;
-            padding-bottom: 5px;
-        }
+body{
 
-        /* বাটন স্টাইল এবং রিপল ইফেক্টের মতো ট্রানজিশন */
-        .btn {
-            display: inline-block;
-            background-color: #3a5fd9;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.1s;
-        }
+font-family:'Segoe UI',sans-serif;
+background:#F3F4F6;
 
-        .btn:hover {
-            background-color: #284cb3;
-        }
+}
 
-        .btn:active {
-            transform: scale(0.95); /* ক্লিক করলে বাটনটি সামান্য ছোট হবে */
-        }
 
-        /* ফুটার */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #222;
-            color: #aaa;
-            font-size: 13px;
-            margin-top: 50px;
-        }
-    </style>
+.store-wrap{
+
+max-width:420px;
+margin:auto;
+
+}
+
+
+
+.hero{
+
+background:linear-gradient(135deg,#ff6600,#ffb703);
+
+padding:35px 20px;
+
+border-radius:0 0 30px 30px;
+
+text-align:center;
+
+color:white;
+
+}
+
+
+.hero h1{
+
+font-size:25px;
+
+}
+
+
+.hero p{
+
+margin:8px;
+
+}
+
+
+
+.search{
+
+position:relative;
+
+}
+
+
+
+.search i{
+
+position:absolute;
+
+left:15px;
+
+top:13px;
+
+color:#777;
+
+}
+
+
+
+.search input{
+
+width:100%;
+
+padding:13px 15px 13px 40px;
+
+border-radius:15px;
+
+border:none;
+
+outline:none;
+
+}
+
+
+
+.body{
+
+padding:20px 15px;
+
+}
+
+
+.title{
+
+font-size:13px;
+
+color:#777;
+
+margin-bottom:12px;
+
+}
+
+
+
+.product-list{
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+
+
+.product{
+
+background:white;
+
+padding:12px;
+
+border-radius:18px;
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+text-decoration:none;
+
+color:black;
+
+}
+
+
+
+.product img{
+
+width:65px;
+
+height:65px;
+
+border-radius:15px;
+
+object-fit:cover;
+
+}
+
+
+
+.info{
+
+flex:1;
+
+}
+
+
+
+.name{
+
+font-weight:600;
+
+font-size:16px;
+
+}
+
+
+.price{
+
+color:#16a34a;
+
+font-weight:bold;
+
+margin-top:5px;
+
+}
+
+
+
+.badge{
+
+background:#dcfce7;
+
+color:#166534;
+
+padding:3px 10px;
+
+border-radius:20px;
+
+font-size:11px;
+
+display:inline-block;
+
+margin-top:5px;
+
+}
+
+
+
+.arrow{
+
+color:#999;
+
+font-size:20px;
+
+}
+
+
+
+</style>
+
+
 </head>
+
+
 <body>
 
-    <header>
-        <h1>স্বাগতম আমার ওয়েবসাইটে</h1>
-        <nav>
-            <a href="#home">হোম</a>
-            <a href="#about">আমাদের সম্পর্কে</a>
-            <a href="#contact">যোগাযোগ</a>
-        </nav>
-    </header>
 
-    <div class="container">
-        
-        <div id="home" class="card">
-            <h2>মূল পাতা (Home)</h2>
-            <p>এটি একটি সম্পূর্ণ রেসপন্সিভ এইচটিএমএল এবং সিএসএস দিয়ে তৈরি সিম্পল টেমপ্লেট। আপনি আপনার প্রোজেক্টের প্রয়োজন অনুযায়ী এই কোডটি কাস্টমাইজ বা পরিবর্তন করে নিতে পারেন।</p>
-            <button class="btn" onclick="alert('বোতামে ক্লিক করা হয়েছে!')">ক্লিক করুন</button>
-        </div>
+<div class="store-wrap">
 
-        <div id="about" class="card">
-            <h2>আমাদের সম্পর্কে (About Us)</h2>
-            <p>আমরা অ্যান্ড্রয়েড অ্যাপ এবং ওয়েব ডেভেলপমেন্ট নিয়ে কাজ করি। চমৎকার ইউজার ইন্টারফেস (UI) এবং স্মুথ অ্যানিমেশনের মাধ্যমে ব্যবহারকারীদের সেরা অভিজ্ঞতা প্রদান করাই আমাদের লক্ষ্য।</p>
-        </div>
 
-    </div>
 
-    <footer>
-        <p>© 2026 আমার ওয়েবসাইট। সর্বস্বত্ব সংরক্ষিত।</p>
-    </footer>
+<div class="hero">
+
+
+<h1>🛒 Jolo Shop</h1>
+
+<p>সেরা পণ্য এক জায়গায়</p>
+
+
+
+<div class="search">
+
+<i class="ti ti-search"></i>
+
+<input type="text" placeholder="পণ্য খুঁজুন..." oninput="searchProduct(this.value)">
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div class="body">
+
+
+<div class="title">
+সব পণ্য
+</div>
+
+
+
+<div class="product-list" id="products">
+
+
+
+<a class="product" href="#">
+
+
+<img src="mobile.jpg">
+
+
+<div class="info">
+
+<div class="name">
+Smart Phone
+</div>
+
+<div class="price">
+₹9999
+</div>
+
+<span class="badge">
+নতুন
+</span>
+
+</div>
+
+
+<i class="ti ti-chevron-right arrow"></i>
+
+
+</a>
+
+
+
+
+
+
+<a class="product" href="#">
+
+
+<img src="watch.jpg">
+
+
+<div class="info">
+
+<div class="name">
+Smart Watch
+</div>
+
+<div class="price">
+₹1499
+</div>
+
+<span class="badge">
+অফার
+</span>
+
+
+</div>
+
+
+<i class="ti ti-chevron-right arrow"></i>
+
+
+</a>
+
+
+
+
+
+
+<a class="product" href="#">
+
+
+<img src="headphone.jpg">
+
+
+<div class="info">
+
+<div class="name">
+Headphone
+</div>
+
+<div class="price">
+₹799
+</div>
+
+<span class="badge">
+ফ্রি ডেলিভারি
+</span>
+
+
+</div>
+
+
+<i class="ti ti-chevron-right arrow"></i>
+
+
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<script>
+
+
+function searchProduct(value){
+
+
+let q=value.toLowerCase();
+
+
+let items=document.querySelectorAll(".product");
+
+
+items.forEach(item=>{
+
+
+let name=item.querySelector(".name").innerText.toLowerCase();
+
+
+if(name.includes(q)){
+
+item.style.display="flex";
+
+}
+
+else{
+
+item.style.display="none";
+
+}
+
+
+
+});
+
+
+}
+
+
+
+</script>
+
+
 
 </body>
+
 </html>

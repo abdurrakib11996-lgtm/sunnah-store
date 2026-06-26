@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,432 +8,378 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 
-
 <style>
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
 }
-
 
 body{
-
-font-family:'Segoe UI',sans-serif;
-background:#F3F4F6;
-
+background:#f3f7f4;
+color:#222;
 }
-
 
 .store-wrap{
-
-max-width:420px;
+max-width:430px;
 margin:auto;
-
+min-height:100vh;
 }
-
-
 
 .hero{
-
-background:linear-gradient(135deg,#ff6600,#ffb703);
-
+background:linear-gradient(135deg,#0f766e,#15803d,#65a30d);
 padding:35px 20px;
-
 border-radius:0 0 30px 30px;
-
+color:#fff;
 text-align:center;
-
-color:white;
-
+box-shadow:0 4px 20px rgba(0,0,0,.15);
 }
-
 
 .hero h1{
-
-font-size:25px;
-
+font-size:26px;
+margin-bottom:5px;
 }
-
 
 .hero p{
-
-margin:8px;
-
+font-size:14px;
+opacity:.9;
+margin-bottom:20px;
 }
-
-
 
 .search{
-
 position:relative;
-
 }
-
-
 
 .search i{
-
 position:absolute;
-
 left:15px;
-
-top:13px;
-
-color:#777;
-
+top:14px;
+color:#666;
 }
-
-
 
 .search input{
-
 width:100%;
-
-padding:13px 15px 13px 40px;
-
-border-radius:15px;
-
+padding:13px 15px 13px 42px;
 border:none;
-
+border-radius:14px;
+font-size:15px;
 outline:none;
-
 }
-
-
 
 .body{
-
-padding:20px 15px;
-
+padding:18px;
 }
-
 
 .title{
-
 font-size:13px;
-
-color:#777;
-
+color:#666;
+font-weight:600;
 margin-bottom:12px;
-
+text-transform:uppercase;
 }
-
-
 
 .product-list{
-
 display:flex;
-
 flex-direction:column;
-
-gap:12px;
-
+gap:15px;
 }
-
-
 
 .product{
-
-background:white;
-
-padding:12px;
-
-border-radius:18px;
-
 display:flex;
-
 align-items:center;
-
 gap:15px;
-
+background:#fff;
+padding:12px;
+border-radius:18px;
 text-decoration:none;
-
-color:black;
-
+color:#111;
+box-shadow:0 3px 10px rgba(0,0,0,.08);
+transition:.2s;
 }
 
-
+.product:hover{
+transform:translateY(-2px);
+}
 
 .product img{
-
-width:65px;
-
-height:65px;
-
-border-radius:15px;
-
+width:70px;
+height:70px;
+border-radius:14px;
 object-fit:cover;
-
+background:#eee;
 }
-
-
 
 .info{
-
 flex:1;
-
 }
-
-
 
 .name{
-
-font-weight:600;
-
 font-size:16px;
-
+font-weight:600;
 }
 
+.desc{
+font-size:13px;
+color:#777;
+margin-top:4px;
+}
 
 .price{
-
-color:#16a34a;
-
+margin-top:8px;
+font-size:18px;
 font-weight:bold;
-
-margin-top:5px;
-
+color:#15803d;
 }
-
-
 
 .badge{
-
-background:#dcfce7;
-
-color:#166534;
-
-padding:3px 10px;
-
-border-radius:20px;
-
-font-size:11px;
-
 display:inline-block;
-
-margin-top:5px;
-
+margin-top:8px;
+background:#dcfce7;
+color:#166534;
+padding:3px 10px;
+border-radius:20px;
+font-size:11px;
+font-weight:bold;
 }
-
-
 
 .arrow{
-
-color:#999;
-
 font-size:20px;
-
+color:#999;
 }
 
+.buy-btn{
+margin-top:10px;
+display:inline-block;
+background:#15803d;
+color:#fff;
+padding:8px 16px;
+border-radius:8px;
+font-size:13px;
+text-decoration:none;
+}
 
+.buy-btn:hover{
+background:#166534;
+}
+
+.footer{
+margin-top:30px;
+text-align:center;
+padding:20px;
+font-size:13px;
+color:#666;
+}
 
 </style>
 
-
 </head>
-
 
 <body>
 
-
 <div class="store-wrap">
-
-
 
 <div class="hero">
 
+<h1>🕌 AR Islamic Store</h1>
 
-<h1>🛒 AR Islamic Store</h1>
-
-<p>Islamic Goods</p>
-
-
+<p>বিশ্বস্ত ইসলামিক পণ্যের অনলাইন স্টোর</p>
 
 <div class="search">
-
 <i class="ti ti-search"></i>
-
 <input type="text" placeholder="পণ্য খুঁজুন..." oninput="searchProduct(this.value)">
-
-
 </div>
 
-
-
 </div>
-
-
-
-
 
 <div class="body">
 
-
-<div class="title">
-সব পণ্য
-</div>
-
-
+<div class="title">জনপ্রিয় পণ্য</div>
 
 <div class="product-list" id="products">
+<!-- টুপি -->
+<a class="product" href="topi.html">
 
-
-
-<a class="product" href="#">
-
-
-<img src="topi.jpeg">
-
+<img src="topi.jpeg" onerror="this.src='https://via.placeholder.com/70'">
 
 <div class="info">
 
-<div class="name">
-সাদ টুপি
-</div>
+<div class="name">সাদা টুপি</div>
 
-<div class="price">
-₹9999
-</div>
+<div class="desc">উচ্চ মানের সুতি নামাজের টুপি</div>
 
-<span class="badge">
-নতুন
-</span>
+<div class="price">₹199</div>
+
+<span class="badge">নতুন</span>
 
 </div>
-
 
 <i class="ti ti-chevron-right arrow"></i>
-
 
 </a>
 
 
 
+<!-- আতর -->
 
+<a class="product" href="attar.html">
 
-
-<a class="product" href="#">
-
-
-<img src="watch.jpg">
-
+<img src="attar.jpeg" onerror="this.src='https://via.placeholder.com/70'">
 
 <div class="info">
 
-<div class="name">
-Smart Watch
-</div>
+<div class="name">আতর</div>
 
-<div class="price">
-₹1499
-</div>
+<div class="desc">অ্যালকোহল মুক্ত সুগন্ধি</div>
 
-<span class="badge">
-অফার
-</span>
+<div class="price">₹299</div>
 
+<span class="badge">অফার</span>
 
 </div>
-
 
 <i class="ti ti-chevron-right arrow"></i>
-
 
 </a>
 
 
 
+<!-- জায়নামাজ -->
 
+<a class="product" href="jaynamaz.html">
 
-
-<a class="product" href="#">
-
-
-<img src="headphone.jpg">
-
+<img src="jaynamaz.jpeg" onerror="this.src='https://via.placeholder.com/70'">
 
 <div class="info">
 
-<div class="name">
-Headphone
-</div>
+<div class="name">জায়নামাজ</div>
 
-<div class="price">
-₹799
-</div>
+<div class="desc">নরম ও আরামদায়ক</div>
 
-<span class="badge">
-ফ্রি ডেলিভারি
-</span>
+<div class="price">₹499</div>
 
+<span class="badge">ফ্রি ডেলিভারি</span>
 
 </div>
-
 
 <i class="ti ti-chevron-right arrow"></i>
-
 
 </a>
 
 
 
+<!-- তাসবীহ -->
+
+<a class="product" href="tasbih.html">
+
+<img src="tasbih.jpeg" onerror="this.src='https://via.placeholder.com/70'">
+
+<div class="info">
+
+<div class="name">তাসবীহ</div>
+
+<div class="desc">৯৯ দানার তাসবীহ</div>
+
+<div class="price">₹149</div>
+
+<span class="badge">স্টকে আছে</span>
+
 </div>
 
+<i class="ti ti-chevron-right arrow"></i>
+
+</a>
+
+
+
+<!-- কুরআন শরীফ -->
+
+<a class="product" href="quran.html">
+
+<img src="quran.jpeg" onerror="this.src='https://via.placeholder.com/70'">
+
+<div class="info">
+
+<div class="name">কুরআন শরীফ</div>
+
+<div class="desc">আরবি টেক্সটসহ</div>
+
+<div class="price">₹650</div>
+
+<span class="badge">সর্বাধিক বিক্রিত</span>
 
 </div>
 
+<i class="ti ti-chevron-right arrow"></i>
 
+</a>
+
+
+
+<!-- মিসওয়াক -->
+
+<a class="product" href="miswak.html">
+
+<img src="miswak.jpeg" onerror="this.src='https://via.placeholder.com/70'">
+
+<div class="info">
+
+<div class="name">মিসওয়াক</div>
+
+<div class="desc">প্রাকৃতিক দাঁত পরিষ্কার</div>
+
+<div class="price">₹80</div>
+
+<span class="badge">ফ্রি ডেলিভারি</span>
 
 </div>
 
+<i class="ti ti-chevron-right arrow"></i>
 
+</a>
+</div>
 
+<div class="footer">
+© 2026 AR Islamic Store <br>
+বিশ্বস্ত ইসলামিক পণ্যের অনলাইন স্টোর
+</div>
+
+</div>
+
+</div>
 
 <script>
 
-
 function searchProduct(value){
 
+let q = value.toLowerCase();
 
-let q=value.toLowerCase();
+let items = document.querySelectorAll(".product");
 
+items.forEach(function(item){
 
-let items=document.querySelectorAll(".product");
+let name = item.querySelector(".name").innerText.toLowerCase();
 
+let desc = item.querySelector(".desc").innerText.toLowerCase();
 
-items.forEach(item=>{
-
-
-let name=item.querySelector(".name").innerText.toLowerCase();
-
-
-if(name.includes(q)){
+if(name.includes(q) || desc.includes(q)){
 
 item.style.display="flex";
 
-}
-
-else{
+}else{
 
 item.style.display="none";
 
 }
 
-
-
 });
-
 
 }
 
-
-
 </script>
 
-
-
 </body>
-
 </html>
+  
+  
